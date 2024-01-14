@@ -12,6 +12,8 @@ class Vehicle{
     public $color;
     public $breaks;
 
+    static $vehicleExpiry = "15 years";
+
     function startVehicle(){
         //start vehicle
     }
@@ -34,5 +36,6 @@ $car->wheels = 4;
 
 var_dump($bike);
 var_dump($car);
+var_dump(Vehicle::$vehicleExpiry);
 
 ?>
