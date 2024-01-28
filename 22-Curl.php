@@ -18,11 +18,11 @@
         <br>
         <div class="row">
             <?php
-            $curl = curl_init();
+            $curl = curl_init();  // open session
             curl_setopt($curl, CURLOPT_URL, "https://cat-fact.herokuapp.com/facts");
             curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
-            $output = curl_exec($curl);
-            curl_close($curl);
+            $output = curl_exec($curl); //perform a session
+            curl_close($curl);  // close session
             $output = json_decode($output, true);
             foreach ($output as $catFact) {
             ?>
